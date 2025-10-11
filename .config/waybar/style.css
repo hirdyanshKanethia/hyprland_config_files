@@ -1,0 +1,127 @@
+@import url("/home/hirdyansh/.cache/wal/colors-waybar.css");
+
+* {
+    font-size: 15px;
+    font-family: "Cascadia Code NF";
+}
+
+window#waybar {
+    all: unset;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid alpha(@color5, 0); /* Transparent border using palette */
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 7px;
+    margin: 3px;
+    border-radius: 5px;
+    background: alpha(@background, 1);
+    color: alpha(@color7, 1);
+    margin-bottom: 0px;
+}
+
+
+.modules-left {
+  margin-left: 5px;
+}
+
+.modules-right {
+  margin-right: 5px;
+}
+
+
+#clock:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover {
+    transition: all .5s ease;
+    color: @color5; /* Subtle aqua from palette */
+}
+
+#custom-notification,
+#clock,
+#custom-pacman {
+    padding: 0px 5px;
+    color: @color7;
+    transition: all .3s ease;
+}
+
+#workspaces {
+   padding: 0px 5px;
+}
+
+#workspaces button {
+   all: unset;
+   padding: 0px 5px;
+   color: @color7;
+   transition: all .2s ease;
+}
+
+#workspaces button:hover {
+   color: alpha(@color4, 1);
+   text-shadow: 0px 0px 4px alpha(@color9, 0.8);
+   transition: all .2s ease;
+}
+
+#workspaces button.active {
+   background-color: alpha(@color7, 1);
+   color: alpha(@background, 1);
+   text-shadow: 0px 0px 6px alpha(@color9, 0.9);
+}
+
+#workspaces button.empty:hover {
+   color: alpha(@color3, 1);
+   transition: all 1s ease;
+}
+
+#workspaces button.empty.active {
+   color: @color2;
+}
+
+#bluetooth,
+#network,
+#battery,
+#cpu,
+#memory,
+#temperature {
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color: @color7;
+}
+
+#battery.charging {
+    color: rgba(0, 255, 0, 1); /* tealish green */
+}
+
+#battery.warning:not(.charging) {
+    color: rgba(255, 255, 0, 1); /* mild warning shade */
+}
+
+#battery.critical:not(.charging) {
+    color: rgba(255, 0, 0, 1);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tray {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}
+
+#tray menu *,
+#tray menu separator {
+    padding: 0px 5px;
+    transition: all .3s ease;
+}

@@ -1,0 +1,132 @@
+:root {
+    --border-radius: 5px;
+    --outer-border-size: 2px; /* Thicker outer borders */
+    --inner-border-size: 1px; /* Thinner inner borders */
+    --border-color-active: rgba(185, 53, 255, 0.8);
+    --index-border-color: rgba(209, 0, 209, 0.6);
+    --bg-color: rgba(128, 0, 128, 0.3);
+    --border-color: rgba(209, 0, 209, 0.6);
+    --box-shadow-hover: 0 0 8px 4px rgba(185, 53, 255, 0.5); /* Subtle hover effect */
+    --text-color: rgba(255, 255, 255, 0.95); /* Near white text */
+    --text-color-alt: rgba(230, 220, 255, 0.9); /* Lavender text */
+    --font-family: "CascadiaCode Nerd Font";
+}
+
+/* Make window background fully transparent without blur */
+body, .window-background, .window, #window {
+    background-color: transparent;
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: none; /* Remove any shadow that might cause blur */
+    border: none; /* Remove any border */
+}
+
+/* Main window container should have no blur effects */
+.window-container, #window-container, .main-window, .main-container {
+    background-color: transparent;
+    box-shadow: none;
+    border: none ;
+}
+
+.client-image {
+    margin: 5px;
+}
+
+.index {
+    margin: 10px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.workspace {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+.client {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+.workspace {
+    /* remove workspace name */
+    font-size: 0;
+    font-weight: lighter;
+    background-color: transparent;
+    border: unset;
+}
+
+.monitor {
+    background-color: transparent;
+    border: unset;
+}
+
+.workspace {
+  font-size: 22px;
+  font-weight: normal;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  border: var(--outer-border-size) solid var(--border-color); /* Thicker outer border */
+  transition: all 0.2s ease;
+  color: var(--text-color-alt); /* Lavender text */
+}
+
+.workspace:hover {
+  background-color: rgba(128, 0, 128, 0.35); /* Minutely different */
+  box-shadow: var(--box-shadow-hover);
+  border-color: rgba(209, 0, 209, 0.7); /* Slightly more visible on hover */
+}
+
+.workspace_special {
+  border: var(--inner-border-size) solid rgba(185, 53, 255, 0.5); /* Inner border */
+}
+
+.workspace_active {
+  border: var(--outer-border-size) solid var(--border-color-active); /* Thicker outer border */
+  box-shadow: 0 0 5px rgba(185, 53, 255, 0.4);
+}
+
+.client {
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  border: var(--inner-border-size) solid var(--border-color); /* Inner border */
+  transition: all 0.2s ease;
+  color: var(--text-color); /* White text */
+}
+
+.client:hover {
+  background-color: rgba(128, 0, 128, 0.35); /* Minutely different */
+  box-shadow: var(--box-shadow-hover);
+  border-color: rgba(209, 0, 209, 0.7); /* Slightly more visible on hover */
+}
+
+.client_active {
+  border: var(--outer-border-size) solid var(--border-color-active); /* Thicker outer border */
+  box-shadow: 0 0 5px rgba(185, 53, 255, 0.4);
+}
+
+.index {
+  margin: 3px;
+  padding: 2px 4px;
+  font-size: 17px; /* Reduced from 18px */
+  font-weight: normal; /* Changed from bold to normal */
+  font-family: "CascadiaCode Nerd Font";
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  border: var(--inner-border-size) solid var(--index-border-color);
+  transition: all 0.2s ease;
+  color: var(--text-color-alt); /* Lavender text */
+}
+
+.index:hover {
+  background-color: rgba(128, 0, 128, 0.35); /* Minutely different */
+  box-shadow: var(--box-shadow-hover);
+  border-color: rgba(209, 0, 209, 0.7); /* Slightly more visible on hover */
+}
+
+/* Additional text styling for any other elements */
+label, text, span {
+  color: var(--text-color);
+}

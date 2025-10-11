@@ -1,0 +1,386 @@
+@import url("/home/hirdyansh/.cache/wal/colors-waybar.css");
+
+* {
+  font-size: 15px;
+  font-family: "Cascadia Code NF";
+  transition: 100ms;
+}
+
+.control-center {
+  border-radius: 10px;
+  -gtk-outline-radius: 10px;
+  border: 2px solid @color3;  /* Reduced from 5px back to 2px */
+  margin: 7px;
+  background-color: alpha(@color0, 0.6);
+  padding: 1.023rem;
+}
+
+.control-center trough {
+  background-color: alpha(@color0, 0.3);
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px;
+  min-width: 0.545rem;
+}
+
+.control-center slider {
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px;
+  min-width: 0.273rem;
+  min-height: 2.045rem;
+  background-color: @color4;
+}
+
+.control-center slider:hover {
+  background-color: @color5;
+  transition: all .3s ease;
+}
+
+.control-center slider:active {
+  background-color: @color6;
+}
+
+/* Fixed button styling - addressing white line issue */
+.widget-buttons-grid {
+  border-radius: 10px;
+  -gtk-outline-radius: 10px;
+  background-color: alpha(@color0, 0.7);
+  padding: 0.5rem;
+  margin: 8px;
+  border: none;  /* Ensure no border causing white line */
+  box-shadow: none;  /* Remove any shadow that might cause white line */
+}
+
+.widget-buttons-grid > flowbox {
+  padding: 0.5rem;
+  border: none;  /* Ensure no border causing white line */
+  background-color: transparent;  /* Ensure no background color issues */
+  box-shadow: none;  /* Remove any shadow that might cause white line */
+}
+
+.widget-buttons-grid > flowbox > flowboxchild {
+  padding: 0.3rem;
+  border: none;  /* Ensure no border causing white line */
+  background-color: transparent;  /* Ensure background is transparent */
+  box-shadow: none;  /* Remove any shadow that might cause white line */
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  border: none;
+  background-color: alpha(@color2, 0.45);
+  border-radius: 10px;
+  min-width: 3.5rem;
+  min-height: 2.927rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  /* Fixed button spacing and alignment */
+  box-shadow: none;  /* Remove any shadow that might cause white line */
+  outline: none;  /* Remove outline that might cause white line */
+}
+
+/* Override any GTK default styles that might cause white lines */
+.widget-buttons-grid > flowbox > flowboxchild > button * {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-family: "CascadiaCode Nerd Font";
+  font-size: 1.3027rem;
+  color: @color7;
+  border: none;  /* Ensure no border causing white line */
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background-color: alpha(@color3, 0.7);
+  transition: all .3s ease;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background-color: @color4;
+  /* Fixed active/checked button state */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked label {
+  font-family: "CascadiaCode Nerd Font";
+  font-size: 1.3027rem;
+  color: @color7;
+  opacity: 1.0;
+}
+
+.widget-title {
+  padding: 0.341rem;
+  margin: 8px;
+}
+
+.widget-title label {
+  font-family: "CascadiaCode Nerd Font";
+  font-size: 1.364rem;
+  color: @color7;
+  margin-left: 0.941rem;
+}
+
+/* Notification styling */
+.control-center .notification-row {
+}
+
+.control-center .notification-row .notification-background .notification,
+.control-center .notification-row .notification-background .notification .notification-content,
+.floating-notifications .notification-row .notification-background .notification,
+.floating-notifications.background .notification-background .notification .notification-content {
+  margin-bottom: unset;
+}
+
+.control-center .notification-row .notification-background .notification {
+}
+
+.control-center .notification-row .notification-background .notification box,
+.control-center .notification-row .notification-background .notification widget,
+.control-center .notification-row .notification-background .notification .notification-content,
+.floating-notifications .notification-row .notification-background .notification box,
+.floating-notifications .notification-row .notification-background .notification widget,
+.floating-notifications.background .notification-background .notification .notification-content {
+  border: unset;
+  border-radius: 5px;
+  -gtk-outline-radius: 10px;
+}
+
+.floating-notifications.background .notification-background .notification .notification-content,
+.control-center .notification-background .notification .notification-content {
+  background-color: alpha(@color0, 0.7);
+  padding-right: unset;
+  margin-right: unset;
+}
+
+.control-center .notification-row .notification-background .notification.low .notification-content label,
+.control-center .notification-row .notification-background .notification.normal .notification-content label,
+.floating-notifications.background .notification-background .notification.low .notification-content label,
+.floating-notifications.background .notification-background .notification.normal .notification-content label {
+  color: @color7;
+}
+
+
+/* === ICONS (ALL PRIORITIES) === */
+.control-center .notification-row .notification-background .notification .notification-content image,
+.control-center .notification-row .notification-background .notification.low .notification-content image,
+.control-center .notification-row .notification-background .notification.normal .notification-content image,
+.floating-notifications.background .notification-background .notification.low .notification-content image,
+.floating-notifications.background .notification-background .notification.normal .notification-content image {
+  background-color: unset;
+  color: @color0;
+}
+
+/* === BODY TEXT === */
+.control-center .notification-row .notification-background .notification.low .notification-content .body,
+.control-center .notification-row .notification-background .notification.normal .notification-content .body,
+.floating-notifications.background .notification-background .notification.low .notification-content .body,
+.floating-notifications.background .notification-background .notification.normal .notification-content .body {
+  color: @color5;
+  font-weight: 500;
+}
+
+/* === LOW PRIORITY NOTIFICATIONS === */
+.control-center .notification-row .notification-background .notification.low .notification-content,
+.floating-notifications.background .notification-background .notification.low .notification-content {
+  background-color: @color0;
+  border: 2px solid @color2;
+  color: @color5;
+  border-radius: 6px;
+}
+
+/* === NORMAL PRIORITY NOTIFICATIONS === */
+.control-center .notification-row .notification-background .notification.normal .notification-content,
+.floating-notifications.background .notification-background .notification.normal .notification-content {
+  background-color: @color0;
+  border: 2px solid @color4;
+  color: @color6;
+  border-radius: 6px;
+}
+
+/* === CRITICAL NOTIFICATIONS === */
+.control-center .notification-row .notification-background .notification.critical .notification-content,
+.floating-notifications.background .notification-background .notification.critical .notification-content {
+  background-color: @color0;
+  border: 2px solid #ff4444;
+  color: #ff4444;
+  font-weight: bold;
+}
+
+
+/* Clear button styling */
+.control-center .notification-row .close-button {
+  background-color: alpha(@color0, 0.7);
+  color: inherit;
+  border: 1px solid alpha(@color7, 0.2);
+  border-radius: 100%;
+  margin-right: 13px;
+  margin-top: 6px;
+  min-height: 20px;
+  min-width: 20px;
+  transition: all 0.2s ease;
+}
+
+.control-center .notification-row .close-button:hover {
+  background-color: alpha(@color7, 0.7);
+  color: inherit;
+  border: 1px solid alpha(@color7, 0.3);
+}
+
+/* Widget styles */
+.widget-volume {
+  background-color: alpha(@color0, 0.7);
+  padding: 8px;
+  margin: 8px;
+  border-radius: 10px;
+  -gtk-outline-radius: 10px;
+}
+
+.widget-volume trough {
+  border: unset;
+  background-color: alpha(@color0, 0.3);
+}
+
+.widget-volume trough slider {
+  background-color: @color4;
+  border-radius: 100%;
+  min-height: 1.25rem;
+}
+
+.widget-mpris {
+  background-color: alpha(@color0, 0.3);
+  padding: 8px;
+  margin: 8px;  
+  border-radius: 10px;
+  -gtk-outline-radius: 10px;
+}
+
+.widget-mpris-player {
+  padding: 8px;
+  margin: 8px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: @color7;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
+  color: alpha(@color7, 0.8);
+}
+
+/* Hover effects */
+.widget-volume label:hover,
+.widget-mpris-player label:hover,
+.widget-buttons-grid label:hover {
+  color: @color6;
+  transition: all .3s ease;
+}
+
+/* Battery styling */
+.widget-battery {
+  padding: 0px 5px;
+  transition: all .3s ease;
+  color: @color7;
+}
+
+.widget-battery.charging {
+  color: @color2;
+}
+
+.widget-battery.warning:not(.charging) {
+  color: @color6;
+}
+
+.widget-battery.critical:not(.charging) {
+  color: @color1;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Workspace styling */
+.workspace-button {
+  all: unset;
+  padding: 0px 5px;
+  color: @color4;
+  transition: all .2s ease;
+}
+
+.workspace-button:hover {
+  color: alpha(@color5, 0.7);
+  transition: all .2s ease;
+}
+
+.workspace-button.active {
+  color: alpha(@color3, 0.4);
+}
+
+.workspace-button.empty {
+  color: alpha(@color0, 0);
+}
+
+.workspace-button.empty:hover {
+  color: alpha(@color4, 0.7);
+  transition: all 1s ease;
+}
+
+.workspace-button.empty.active {
+  color: @color4;
+}
+
+/* Custom endpoint styling */
+.custom-endpoint {
+  color: transparent;
+  text-shadow: 0px 0px 1.5px @color2;
+}
+
+@keyframes blink {
+  from {
+    background-color: alpha(@color1, 0.9);
+  }
+  to {
+    background-color: alpha(@color1, 0.6);
+  }
+}
+
+/* Override GTK default styling that might cause white lines */
+button {
+  border-top-color: transparent;
+  border-top-width: 0;
+  border-top-style: none;
+  border-top: none;
+}
+
+flowbox, flowboxchild {
+  border-top-color: transparent;
+  border-top-width: 0;
+  border-top-style: none;
+  border-top: none;
+  background-color: transparent;
+}
+
+/* Make sure no borders/lines on any elements in the button grid */
+.widget-buttons-grid, 
+.widget-buttons-grid * {
+  border-image: none;
+  border-top-color: transparent;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Additional fixes for possible white line issues */
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  border-top: 0;
+  padding-top: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.widget-buttons-grid > flowbox {
+  border-top: 0;
+  padding-top: 0.5rem;
+}

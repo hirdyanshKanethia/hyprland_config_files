@@ -1,0 +1,157 @@
+{
+    "layer": "top",
+        "position": "top",
+        "reload_style_on_change": true,
+        "modules-left": ["tray", "custom/seperator", "hyprland/workspaces"],
+        "modules-center": ["custom/date", "custom/seperator","clock"],
+        "modules-right": ["custom/micmute", "custom/seperator", "pulseaudio","custom/seperator","backlight","custom/seperator","cpu", "memory", "custom/seperator","bluetooth","custom/seperator","battery", "custom/battery_notify"],
+
+        "custom/date": {
+            "tooltip": false,
+            "exec": "date '+%A, %d'",
+            "interval": 60,
+	    "on-click": "gnome-calendar"
+	},
+
+	"hyprland/workspaces": {
+    	    "format": "{name}",
+    	    "format-icons": {
+    	    	"active": "",
+   	    	"default": "",
+    	    	"empty": ""
+	    }, 
+ 	    "all-outputs": true,
+      "active-only": false,
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "show-special": true
+	},
+        "clock": {
+            "format": "{:%I:%M} ",
+            "interval": 1,   
+            "tooltip-format": "",
+            "calendar": {
+                "format": {
+                    "today": "<span color='#fAfBfC'><b>{}</b></span>"
+                }
+            }
+        },
+
+        "network": {
+           "format-wifi": "",
+            "format-ethernet":"",
+            "format-disconnected": "",
+            "tooltip-format-disconnected": "Error",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+            "tooltip-format-ethernet": "{ifname} 🖧 ",
+            "on-click": "kitty nmtui"
+        },
+        "bluetooth": {
+            "format-on": "󰂯",
+            "format-off": "BT-off",
+            "format-disabled": "󰂲",
+            "format-connected-battery": "{device_battery_percentage}% 󰂯",
+            "format-alt": "{device_alias} 󰂯",
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+            "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+            "on-click": "",
+        }, 
+        "battery": {
+            "interval":30,
+            "states": {
+                "good": 95,
+                "warning": 20,
+                "critical": 10
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% 󰂄",
+            "format-plugged": "{capacity}% 󰂄 ",
+            "format-alt": "{time} {icon}",
+            "format-icons": [
+                "󰁻",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂",
+            "󰁹"
+            ],
+        },
+        "custom/expand": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/endpoint":{
+            "format": "|",
+            "tooltip": false
+        },
+        "group/expand": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 600,
+                "transition-to-left": true,
+                "click-to-reveal": true
+            },
+            "modules": ["custom/expand", "custom/colorpicker","cpu", "temperature","custom/endpoint"],
+        },
+        "custom/colorpicker": {
+            "format": "{}",
+            "return-type": "json",
+            "interval": "once",
+            "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+            "on-click": "~/.config/waybar/scripts/colorpicker.sh",
+            "signal": 1
+        },
+        "cpu": {
+            "format": "",
+            "tooltip": true,
+	    "on-click": "ghostty --class=bpytop -e bpytop"
+        },
+        "temperature": {
+            "critical-threshold": 80,
+            "format": "",
+        },
+        "tray": {
+            "icon-size": 14,
+            "spacing": 10
+        },
+	"pulseaudio": {
+	    "format": " {volume}%",
+    	    "format-muted": " 0%",
+            "on-click": "pamixer -t",
+    	    "on-scroll-up": "pamixer -i 5",
+    	    "on-scroll-down": "pamixer -d 5",
+    	    "tooltip": false
+	},
+	"backlight": {
+    	    "device": "intel_backlight",
+    	    "format": "󰖙 {percent}%",
+	    "tooltip": false
+	},
+	"custom/seperator": {
+	    "format": " | ",
+	    "tooltip": false
+	},
+
+  "custom/battery_notify": {
+    "exec": "~/.config/waybar/scripts/battery_notify.sh",
+    "interval": 60, // check every 60 seconds
+    "restart-interval": 0,
+    "return-type": "empty"
+  },
+
+  "custom/micmute": {
+    "exec": "pactl get-source-mute @DEFAULT_SOURCE@ | grep -q 'yes' && echo ' ' || echo ' '",
+    "interval": 60,
+    "tooltip": false,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+  
+  "memory": {
+    "interval": 5,
+    "format": "{used:0.1f}G/{total:0.1f}G",
+    "format-alt": "{percentage}%",
+    "tooltip": true
+  }
+} 
