@@ -1,1 +1,126 @@
-../dotfiles/starship/.config/starship.toml
+"$schema" = 'https://starship.rs/config-schema.json'
+format = """
+$os$username$time$directory$git_branch$c$rust$golang$nodejs$php$java$kotlin$haskell$python$docker_context$cmd_duration$line_break$character"""
+
+[os] 
+disabled = true 
+style = "#0000FF"
+format = "[$symbol]($style) "
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = false 
+style_user = "bold #FFFFFF"
+style_root = "bold #FF0000"
+format = '[\[$user]($style_user) '
+
+[directory]
+style = "bold #FFFF00"
+# Directory wrapped in square brackets
+format = '[\[$path\]]($style)-'
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bold #00FFFF"
+# Git branch wrapped in square brackets
+format = '[\[git-$symbol$branch\]]($style)-'
+
+[git_status]
+style = "bold #008000"
+# Git status also wrapped in square brackets
+format = '[\[git-($all_status$ahead_behind)\]]($style)-'
+
+[nodejs]
+disabled = false
+style = "bold #0000FF"
+format = '[\[$version js\]]($style)-'
+
+[c]
+disabled = false
+style = "bold #FFFFFF"
+format = '[\[$version c\]]($style)-'
+
+[rust]
+disabled = false
+style = "bold #FFA500"
+format = '[\[$version rs\]]($style)-'
+
+[golang]
+disabled = false
+style = "bold #00FFFF"
+format = '[\[$version go\]]($style)-'
+
+[php]
+disabled = false
+style = "bold #FF00FF"
+format = '[\[$version php\]]($style)-'
+
+[java]
+disabled = false
+style = "bold #FF0000"
+format = '[\[$version java\]]($style)-'
+
+[kotlin]
+disabled = false
+style = "bold #0000FF"
+format = '[\[$version kt\]]($style)-'
+
+[haskell]
+disabled = false
+style = "bold #008000"
+format = '[\[$version hs\]]($style)-'
+
+[python]
+disabled = false
+style = "bold #FFFF00"
+format = '[\[$version py\]]($style)-'
+
+[docker_context]
+style = "bold #0000FF"
+format = '[\[$context\]]($style)-'
+
+[cmd_duration]
+disabled = false
+min_time = 0
+style = "bold #FFA500"
+format = '[\[$duration\]]($style)'
+
+[time]
+disabled = false
+time_format = "%-I:%M"
+style = "bold #FFFFFF"
+format = '[\[$time\]]($style)-'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[>_](bold #00FF00)'
+error_symbol = '[>_](bold #FF0000)'
+vimcmd_symbol = '[<](bold #0000FF)'
+vimcmd_replace_one_symbol = '[<](bold #800080)'
+vimcmd_replace_symbol = '[<](bold #800080)'
+vimcmd_visual_symbol = '[<](bold #FFFF00)'
