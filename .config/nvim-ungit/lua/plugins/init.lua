@@ -1,3 +1,5 @@
+local leet_arg = "lc"
+
 return {
   {
     "stevearc/conform.nvim",
@@ -25,6 +27,33 @@ return {
     event = "VeryLazy",
     config = function()
       require "plugins.competitest"
+    end,
+  },
+
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    },
+
+    lazy = leet_arg ~= vim.fn.argv(0, -1),
+    opts = require "configs.leetcode",
+  },
+
+  {
+    "3rd/image.nvim",
+    build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
+    opts = {
+      processor = "magick_cli",
+    },
+    config = function()
+      require "plugins.image"
     end,
   },
 

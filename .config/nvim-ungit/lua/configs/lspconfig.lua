@@ -1,10 +1,10 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "clangd", "gopls" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers
-local neoscroll = require "neoscroll"
+-- local neoscroll = require "neoscroll"
 
 vim.lsp.config("gopls", {
   cmd = { "gopls" },
@@ -18,16 +18,23 @@ vim.lsp.config("gopls", {
   },
 })
 
--- 2. Enable gopls
-vim.lsp.enable "gopls"
+vim.lsp.config("clangd", {
+  cmd = { "clangd", "--background-index" }, -- optional flags
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_markers = { ".git", "compile_commands.json" },
+  settings = {
+    clangd = {
+      -- You can set additional clangd options here if needed
+    },
+  },
+})
 
 -- 3. Attach keymaps and auto-format
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(args)
-    local buf = args.buf
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client.name ~= "gopls" then
+    if client.name ~= "gopls" and client.name ~= "clangd" then
       return
     end
     local buf = args.buf
