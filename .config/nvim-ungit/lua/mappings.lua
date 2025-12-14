@@ -67,11 +67,11 @@ local scroll_keys = {
   ["<A-l>"] = function()
     neoscroll.ctrl_f { duration = 450, easing = "circular" }
   end,
-  ["<C-y>"] = function()
-    neoscroll.scroll(-0.1, { move_cursor = false, duration = 100 })
+  ["<A-K>"] = function()
+    neoscroll.scroll(-0.1, { move_cursor = true, duration = 100 })
   end,
-  ["<C-e>"] = function()
-    neoscroll.scroll(0.1, { move_cursor = false, duration = 100 })
+  ["<A-J>"] = function()
+    neoscroll.scroll(0.1, { move_cursor = true, duration = 100 })
   end,
   ["zt"] = function()
     neoscroll.zt { half_win_duration = 250 }

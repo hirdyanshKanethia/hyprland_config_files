@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "clangd", "gopls" }
+local servers = { "html", "cssls", "clangd", "gopls", "rust-analyzer" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers
@@ -29,12 +29,33 @@ vim.lsp.config("clangd", {
   },
 })
 
+vim.lsp.config("rust-analyzer", {
+  cmd = { "rust-analyzer" },
+  filetypes = { "rust" },
+  root_markers = { "Cargo.toml", ".git" },
+
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+      check = {
+        command = "clippy",
+      },
+      diagnostics = {
+        enable = true,
+        disabled = { "unresolved-proc-macro" }, -- optional
+      },
+    },
+  },
+})
+
 -- 3. Attach keymaps and auto-format
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client.name ~= "gopls" and client.name ~= "clangd" then
+    if client.name ~= "gopls" and client.name ~= "clangd" and client.name ~= "rust-analyzer" then
       return
     end
     local buf = args.buf

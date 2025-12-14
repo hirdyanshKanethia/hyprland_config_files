@@ -2,12 +2,15 @@ return {
   -- NvimTree plugin override
   {
     "nvim-tree/nvim-tree.lua",
+    filters = {
+      dotfiles = false, -- show dotfiles (like .env)
+    },
     opts = {
       view = {
-        width = 26,           -- sidebar width
-        side = "left",        -- "left" or "right"
-        number = true,        -- show absolute number
-        relativenumber = true,-- show relative numbers
+        width = 26, -- sidebar width
+        side = "left", -- "left" or "right"
+        number = true, -- show absolute number
+        relativenumber = true, -- show relative numbers
       },
       renderer = {
         highlight_git = false,

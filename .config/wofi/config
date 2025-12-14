@@ -2,7 +2,7 @@
 allow_images=true
 width=500
 show=drun
-prompt=Search
+prompt=search
 height=390
 always_parse_args=true
 show_all=true
