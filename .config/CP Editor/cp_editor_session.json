@@ -1,0 +1,48 @@
+{
+    "currentIndex": 0,
+    "tabs": [
+        {
+            "checkerIndex": 0,
+            "customCheckers": [
+            ],
+            "customCompileCommand": "",
+            "customTimeLimit": -1,
+            "editorAnchor": 422,
+            "editorCursor": 422,
+            "editorText": "// Problem: A. The number of positions\n// Contest: Codeforces - Codeforces Beta Round 92 (Div. 2 Only)\n// URL: https://codeforces.com/problemset/problem/124/A\n// Memory Limit: 256 MB\n// Time Limit: 500 ms\n// \n// Powered by CP Editor (https://cpeditor.org)\n\n#include <bits/stdc++.h>\nusing namespace std;\n\ntypedef long long ll;\n\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n  // solve here\n\n  return 0;\n}\n",
+            "expected": [
+                "2\n",
+                "3\n"
+            ],
+            "filePath": "",
+            "horizontalScrollBarValue": 0,
+            "input": [
+                "3 1 1\n",
+                "5 2 3\n"
+            ],
+            "isLanguageSet": true,
+            "language": "C++",
+            "problemURL": "https://codeforces.com/problemset/problem/124/A",
+            "savedText": "#include <bits/stdc++.h>\nusing namespace std;\n\ntypedef long long ll;\n\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n  // solve here\n\n  return 0;\n}\n",
+            "testCaseSplitterStates": [
+                [
+                    167,
+                    150,
+                    162
+                ],
+                [
+                    167,
+                    150,
+                    162
+                ]
+            ],
+            "testcasesIsShow": [
+                true,
+                true
+            ],
+            "timestamp": 1753327563912,
+            "untitledIndex": 1,
+            "verticalScrollbarValue": 0
+        }
+    ]
+}

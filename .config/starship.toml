@@ -35,7 +35,7 @@ style_root = "bold #FF0000"
 format = '[\[$user]($style_user) '
 
 [directory]
-style = "bold #FFFF00"
+style = "bold #FF00FF"
 # Directory wrapped in square brackets
 format = '[\[$path\]]($style)-'
 truncation_length = 3
@@ -104,7 +104,7 @@ format = '[\[$context\]]($style)-'
 [cmd_duration]
 disabled = false
 min_time = 0
-style = "bold #FFA500"
+style = "bold #FFFFFF"
 format = '[\[$duration\]]($style)'
 
 [time]

@@ -21,4 +21,13 @@ M.base46 = {
 --      }
 -- }
 
+-- autocommand to resize panes upon tree open (close works by default idk how) 
+vim.api.nvim_create_autocmd({ "WinNew", "WinClosed" }, {
+  callback = function()
+    vim.defer_fn(function()
+      vim.cmd "wincmd ="
+    end, 50)
+  end,
+})
+
 return M

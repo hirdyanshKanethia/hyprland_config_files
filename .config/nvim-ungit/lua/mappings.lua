@@ -2,6 +2,14 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- Remove existing <leader>v and <leader>h mappings
+map("n", "<leader>v", "<Nop>", { silent = true })
+map("n", "<leader>h", "<Nop>", { silent = true })
+
+-- Split screen mappings
+map("n", "<leader>v", "<cmd>vsplit<CR>", { desc = "Vertical split screen" })
+map("n", "<leader>h", "<cmd>split<CR>", { desc = "Horizontal split screen" })
+
 -- Existing mappings
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
@@ -23,6 +31,17 @@ vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Window left"
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Window right" })
 vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Window down" })
 vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Window up" })
+
+-- Keymap to toggle diagnostic warnings (inline text and underlines only, keeps gutter signs)
+vim.keymap.set("n", "<leader>td", function()
+  local cfg = vim.diagnostic.config()
+
+  vim.diagnostic.config {
+    virtual_text = not cfg.virtual_text,
+    underline = not cfg.underline,
+    signs = true, -- always keep gutter signs
+  }
+end, { desc = "Toggle inline diagnostics + underline" })
 
 -- require neoscroll and setup defaults
 local neoscroll = require "neoscroll"

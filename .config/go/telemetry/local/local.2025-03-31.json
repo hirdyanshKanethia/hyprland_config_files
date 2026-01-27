@@ -1,0 +1,91 @@
+{
+ "Week": "2025-03-31",
+ "LastWeek": "",
+ "X": 0.8111668883339771,
+ "Programs": [
+  {
+   "Program": "cmd/asm",
+   "Version": "go1.23.7",
+   "GoVersion": "go1.23.7",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "asm/flag:D": 43,
+    "asm/flag:I": 43,
+    "asm/flag:gensymabis": 12,
+    "asm/flag:o": 43,
+    "asm/flag:p": 43,
+    "asm/flag:trimpath": 43,
+    "asm/invocations": 43
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/compile",
+   "Version": "go1.23.7",
+   "GoVersion": "go1.23.7",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "compile/flag:asmhdr": 12,
+    "compile/flag:buildid": 53,
+    "compile/flag:c": 53,
+    "compile/flag:complete": 37,
+    "compile/flag:dwarf": 1,
+    "compile/flag:goversion": 53,
+    "compile/flag:importcfg": 53,
+    "compile/flag:lang": 53,
+    "compile/flag:nolocalimports": 53,
+    "compile/flag:o": 53,
+    "compile/flag:p": 53,
+    "compile/flag:pack": 53,
+    "compile/flag:std": 52,
+    "compile/flag:symabis": 12,
+    "compile/flag:trimpath": 53,
+    "compile/invocations": 65
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/go",
+   "Version": "go1.23.7",
+   "GoVersion": "go1.23.7",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "go/buildcache/miss": 54,
+    "go/buildcache/stdlib-recompiled": 1,
+    "go/goroot:usr-lib-golang": 9,
+    "go/invocations": 10,
+    "go/mode:module": 9,
+    "go/platform/host/linux/major-version:6": 9,
+    "go/platform/host/linux/version:6-13": 9,
+    "go/platform/target/goamd64:v1": 9,
+    "go/platform/target/goarch:amd64": 9,
+    "go/platform/target/goos:linux": 9,
+    "go/subcommand:run": 2,
+    "go/subcommand:version": 7
+   },
+   "Stacks": {}
+  },
+  {
+   "Program": "cmd/link",
+   "Version": "go1.23.7",
+   "GoVersion": "go1.23.7",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "link/flag:buildid": 1,
+    "link/flag:buildmode": 1,
+    "link/flag:extld": 1,
+    "link/flag:importcfg": 1,
+    "link/flag:o": 1,
+    "link/flag:s": 1,
+    "link/flag:w": 1,
+    "link/invocations": 2
+   },
+   "Stacks": {}
+  }
+ ],
+ "Config": "v0.0.0-0"
+}
