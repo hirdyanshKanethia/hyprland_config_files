@@ -5,6 +5,7 @@
         "modules-left": ["tray", "custom/seperator", "hyprland/workspaces"],
         "modules-center": ["custom/date", "custom/seperator","clock"],
         "modules-right": [
+          "cava",
           "pulseaudio",
           "custom/seperator",
           "backlight",
@@ -53,15 +54,6 @@
             }
         },
 
-        "network": {
-           "format-wifi": "",
-            "format-ethernet":"",
-            "format-disconnected": "",
-            "tooltip-format-disconnected": "Error",
-            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-            "tooltip-format-ethernet": "{ifname} 🖧 ",
-            "on-click": "kitty nmtui"
-        },
         "bluetooth": {
             "format-on": "󰂯",
             "format-off": "BT-off",
@@ -94,31 +86,6 @@
             "󰁹"
             ],
         },
-        "custom/expand": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/endpoint":{
-            "format": "|",
-            "tooltip": false
-        },
-        "group/expand": {
-            "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": 600,
-                "transition-to-left": true,
-                "click-to-reveal": true
-            },
-            "modules": ["custom/expand", "custom/colorpicker","cpu", "temperature","custom/endpoint"],
-        },
-        "custom/colorpicker": {
-            "format": "{}",
-            "return-type": "json",
-            "interval": "once",
-            "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-            "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-            "signal": 1
-        },
         "cpu": {
             "format": "",
             "tooltip": true,
@@ -133,8 +100,8 @@
             "spacing": 10
         },
 	"pulseaudio": {
-	    "format": " {volume}%",
-    	    "format-muted": " 0%",
+	    "format": "  {volume}%",
+    	    "format-muted": "  0%",
             "on-click": "pamixer -t",
     	    "on-scroll-up": "pamixer -i 5",
     	    "on-scroll-down": "pamixer -d 5",
@@ -177,5 +144,30 @@
     "return-type": "json",
     "format": "{}",
     "tooltip": true
-  }
+  },
+
+  "cava": {
+          // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+          "framerate": 30,
+          "autosens": 1,
+          "sensitivity": 100,
+          "bars": 14,
+          "lower_cutoff_freq": 50,
+          "higher_cutoff_freq": 10000,
+          "hide_on_silence": false,
+          // "format_silent": "quiet",
+          "method": "pulse",
+          "source": "auto",
+          "stereo": true,
+          "reverse": false,
+          "bar_delimiter": 0,
+          "monstercat": false,
+          "waves": false,
+          "noise_reduction": 0.77,
+          "input_delay": 2,
+          "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+          "actions": {
+                     "on-click-right": "mode"
+                     }
+    },
 } 

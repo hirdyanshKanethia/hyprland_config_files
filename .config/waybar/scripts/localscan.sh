@@ -40,7 +40,7 @@ for port in "${ports[@]}"; do
 done
 
 if (( count == 0 )); then
-  printf '{"text":"󰒍 0","tooltip":"No user-level network services open"}\n'
+  printf '{"text":"󰛳 0","tooltip":"No user-level network services open"}\n'
   exit 0
 fi
 

@@ -56,7 +56,7 @@
 
 # Font Configuration
 font-family = "Caskaydia Code NF"
-font-size = 11 
+font-size =  10
 font-feature = -calt  # Disable ligatures, remove if you want them
 
 # # Window Configuration
@@ -65,15 +65,15 @@ font-feature = -calt  # Disable ligatures, remove if you want them
 # window-padding-balance = true
 # window-decoration = false  # Remove title bar for minimal look
 
-# Background and Transparency
-background-opacity = 0.70
+# Glassy transparent dark base
+background = #000000
+foreground = #ffffff
+
+background-opacity = 0.75
 background-blur-radius = 20
 
-# Theme: Custom Dark Minimal
-background = #000000
-foreground = #e0e0e0
 cursor-color = #ffffff
-selection-background = #264f78
+selection-background = #444444
 selection-foreground = #ffffff
 
 # Black
