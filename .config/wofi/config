@@ -1,6 +1,6 @@
 [config]
 allow_images=true
-width=500
+width=550
 show=drun
 prompt=search
 height=390

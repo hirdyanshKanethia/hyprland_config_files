@@ -20,7 +20,7 @@
           "bluetooth",
           "custom/seperator",
           "battery",
-          "custom/battery_notify"
+          "custom/battery_notify",
         ],
 
         "custom/date": {
@@ -145,6 +145,17 @@
     "format": "{}",
     "tooltip": true
   },
+
+  "network": {
+      "interval": 5,
+      "format-wifi": " ",
+      "format-ethernet": "󰈀  Wired",
+      "format-disconnected": "󰖪  Offline",
+      "tooltip-format": "{essid}\n{ipaddr}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "
+      kitty --title gazelle --override font_size=10 -e gazelle"
+    },
 
   "cava": {
           // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
