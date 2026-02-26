@@ -1,26 +1,29 @@
 * {
-	background-image: none;
-	box-shadow: none;
+    background-image: none;
+    box-shadow: none;
 }
+
 window {
-	background-color: rgba(1, 9, 14, 0.7); /* #01090E with alpha */
+    background-color: rgba(27, 30, 65, 0.5); /* Pywal color0 (#1b1e41) with 0.7 alpha */
 }
+
 button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15%;
-    border: 2px solid #9DC1B5; /* Slightly darker light color for border */
-    background-color: rgba(1, 9, 14, 0.7); /* Darkest color for background with alpha */
+    border: 2px solid #8B6898; /* Pywal color4 */
+    background-color: rgba(27, 30, 65, 0.7); /* Pywal color0 with 0.7 alpha */
     margin: 30px;
     padding: 10px;
-    /*transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;*/ /* Added back background-color transition */
+    /*transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;*/ 
     font-size: 0;
     color: transparent;
 }
+
 button:hover {
-	background-color: rgba(74, 119, 110, 0.7); /* Slightly lighter background on hover (#4A776E with alpha) */
-	box-shadow: 0 0 10px #5A867A; /* Slightly darker glow effect on hover */
-	outline: none; /* Remove default focus outline */
+    background-color: rgba(74, 73, 151, 0.7); /* Pywal color2 (#4A4997) with 0.7 alpha */
+    box-shadow: 0 0 10px #6FB9DB; /* Pywal color6 glow effect */
+    outline: none; /* Remove default focus outline */
 }
 
 #lock {
@@ -28,24 +31,29 @@ button:hover {
     margin-left: 350px;
     margin-top: 100px;
 }
+
 #logout {
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
     margin-top: 100px;
 }
+
 #suspend {
     background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
     margin-top: 100px;
     margin-right: 350px;
 }
+
 #hibernate {
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
     margin-left: 350px;
     margin-bottom: 100px;
 }
+
 #shutdown {
     background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
     margin-bottom: 100px;
 }
+
 #reboot {
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
     margin-right: 350px;

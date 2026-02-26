@@ -59,23 +59,27 @@ font-family = "Caskaydia Code NF"
 font-size =  10
 font-feature = -calt  # Disable ligatures, remove if you want them
 
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
 # # Window Configuration
 # window-padding-x = 8
 # window-padding-y = 8
 # window-padding-balance = true
 # window-decoration = false  # Remove title bar for minimal look
 
-# Glassy transparent dark base
-background = #000000
-foreground = #ffffff
-
-background-opacity = 0.75
+# # Glassy transparent dark base
+# background = #000000
+# foreground = #ffffff
+#
+background-opacity = 0.8
 background-blur-radius = 20
-
-cursor-color = #ffffff
-selection-background = #444444
-selection-foreground = #ffffff
-
+#
+# cursor-color = #ffffff
+# selection-background = #444444
+# selection-foreground = #ffffff
+#
 # Black
 palette = 0=#000000
 palette = 8=#808080
@@ -108,13 +112,34 @@ palette = 14=#33ffff
 palette = 7=#c0c0c0
 palette = 15=#ffffff
 
+
+# pywal colors
+background = 1b1e41
+foreground = c6c6cf
+cursor-color = c6c6cf
+selection-background = c6c6cf
+selection-foreground = 1b1e41
+
+# palette = 0=#1b1e41
+# palette = 1=#2D53A8
+# palette = 2=#4A4997
+# palette = 3=#515CA4
+# palette = 4=#8B6898
+# palette = 5=#619ECF
+# palette = 6=#6FB9DB
+# palette = 7=#c6c6cf
+# palette = 8=#6a6c82
+# palette = 9=#2D53A8
+# palette = 10=#4A4997
+# palette = 11=#515CA4
+# palette = 12=#8B6898
+# palette = 13=#619ECF
+# palette = 14=#6FB9DB
+# palette = 15=#c6c6cf
+
 # Shell Integration
 shell-integration = detect
 shell-integration-features = cursor,sudo
-
-# Cursor
-cursor-style = block
-cursor-style-blink = true
 
 # Scrollback
 scrollback-limit = 10000

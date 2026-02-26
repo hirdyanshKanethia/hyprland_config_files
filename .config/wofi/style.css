@@ -71,7 +71,7 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: @color5; /* Light color */
+    color: @color4; /* Light color */
     outline: none;
 }
 
@@ -94,7 +94,7 @@ window {
 }
 
 #entry:selected #text {
-    color: @color2;
+    color: @color6;
 }
 
 #entry:drop(active) {
