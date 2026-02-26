@@ -219,24 +219,20 @@
 ; background = default
 ; foreground = default
 
-# SDL and sdl_glsl only support hex code colors, these are the default:
-; background = '#111111'
-; foreground = '#33ffff'
+[color]
+# Use your terminal's background (which is Pywal's #1b1e41)
+background = default
+foreground = default
 
-
-# Gradient mode, only hex defined colors are supported,
-# background must also be defined in hex or remain commented out. 1 = on, 0 = off.
-# You can define as many as 8 different colors. They range from bottom to top of screen
-; gradient = 0
-; gradient_count = 8
-; gradient_color_1 = '#59cc33'
-; gradient_color_2 = '#80cc33'
-; gradient_color_3 = '#a6cc33'
-; gradient_color_4 = '#cccc33'
-; gradient_color_5 = '#cca633'
-; gradient_color_6 = '#cc8033'
-; gradient_color_7 = '#cc5933'
-; gradient_color_8 = '#cc3333'
+# Enable Pywal gradient
+gradient = 1
+gradient_count = 6
+gradient_color_1 = '#2D53A8' # Deep Blue (Base)
+gradient_color_2 = '#4A4997' # Deep Purple
+gradient_color_3 = '#515CA4' # Muted Indigo
+gradient_color_4 = '#8B6898' # Amethyst
+gradient_color_5 = '#619ECF' # Soft Blue
+gradient_color_6 = '#6FB9DB' # Bright Cyan (Peaks)
 
 
 
@@ -264,7 +260,7 @@
 # Noise reduction, int 0 - 100. default 77
 # the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
 # 100 will be very slow and smooth, 0 will be fast but noisy.
-; noise_reduction = 77
+; noise_reduction = 80
 
 
 [eq]
