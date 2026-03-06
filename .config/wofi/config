@@ -1,13 +1,18 @@
 [config]
 allow_images=true
-width=550
+width=700
 show=drun
-prompt=search
-height=390
+prompt=Search apps...
+height=430
 always_parse_args=true
 show_all=true
-term=kitty
+term=ghostty
 hide_scroll=true
 print_command=true
 insensitive=true
 columns=1
+no_actions=true
+key_up=ISO_Left_Tab
+key_down=Tab
+key_submit=Return
+key_exit=Escape

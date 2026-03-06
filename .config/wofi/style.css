@@ -1,10 +1,8 @@
 @import url("/home/hirdyansh/.cache/wal/colors-waybar.css");
 
 @keyframes fadeIn {
-    0% {
-    }
-    100% {
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 * {
@@ -16,11 +14,13 @@
     background-color: transparent;
 }
 
+/* Restored your original window styling */
 window {
     all: unset;
     padding: 20px;
     border-radius: 15px;
-    background-color: alpha(@color0, 0.7); }
+    background-color: alpha(@color0, 0.7); 
+}
 
 #inner-box {
     margin: 2px;
@@ -49,45 +49,45 @@ window {
     outline: none;
     color: @color7; 
     border-radius: 10px;
-    background-color: alpha(@color0, 0.0); 
+    background-color: alpha(@color0, 0.0);
+    text-align: center; /* Centering search text */
 }
 
 #input image {
     border: none;
-    color: @color13; /* Bright color */
+    color: @color13;
 }
 
-#input * {
+/* Layout Fix: Centering image and text together */
+#entry {
     border: none;
-    outline: none;
+    margin: 5px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#input:focus {
-    outline: none;
+/* Layout Fix: Hiding the expander arrows */
+#entry arrow {
+    -gtk-icon-source: none;
     border: none;
-    border-radius: 10px;
+    background: none;
+    color: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 #text {
     margin: 5px;
     border: none;
-    color: @color4; /* Light color */
+    color: @color4; 
     outline: none;
-}
-
-#entry {
-    border: none;
-    margin: 5px;
-    padding-left: 10px;
-}
-
-#entry arrow {
-    border: none;
-    color: @color15;
+    vertical-align: middle;
 }
 
 #entry:selected {
-    box-shadow: 1px 1px 5px rgba(230, 230, 250, 0.3); /* Soft lavender glow */
+    box-shadow: 1px 1px 5px rgba(230, 230, 250, 0.3);
     border: none;
     border-radius: 20px;
     background-color: transparent;
@@ -100,4 +100,3 @@ window {
 #entry:drop(active) {
     background-color: @color7;
 }
-
