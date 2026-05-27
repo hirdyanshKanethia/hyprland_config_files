@@ -1,8 +1,8 @@
 return {
   {
-    "hrsh7th/competitest.nvim",  -- replace with the actual repo name if different
+    "xeluxee/competitest.nvim",
     config = function()
-      require('competitest').setup {
+      require("competitest").setup {
         local_config_file_name = ".competitest.lua",
 
         floating_border = "rounded",
@@ -118,7 +118,7 @@ return {
         receive_print_message = true,
         start_receiving_persistently_on_setup = false,
         template_file = {
-          cpp = "~/Templates/cp.cpp"
+          cpp = "~/Templates/cp.cpp",
         },
         evaluate_template_modifiers = true,
         date_format = "%c",
@@ -136,7 +136,12 @@ return {
 
       -- Optional: keymaps
       vim.keymap.set("n", "<leader>'", "<cmd>CompetiTest run<CR>", { desc = "Run testcases #CompetiTest#" })
-      vim.keymap.set("n", "<leader>rp", "<cmd>CompetiTest receive problem<CR>", { desc = "Receive Problem #CompetiTest#" })
-    end
-  }
+      vim.keymap.set(
+        "n",
+        "<leader>rp",
+        "<cmd>CompetiTest receive problem<CR>",
+        { desc = "Receive Problem #CompetiTest#" }
+      )
+    end,
+  },
 }

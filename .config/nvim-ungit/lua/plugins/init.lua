@@ -68,39 +68,22 @@ return {
       suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
       -- log_level = 'debug',
     },
-  }
+  },
 
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = {
-  --     ensure_installed = { "gopls", "gofumpt" },
-  --     automatic_installation = true,
-  --   },
-  -- },
-  -- {
-  --   "williamboman/mason-lspconfig.nvim",
-  --   opts = {
-  --     ensure_installed = { "gopls" },
-  --   },
-  -- },
-  -- {
-  --   "jayp0521/mason-null-ls.nvim",
-  --   opts = {
-  --     ensure_installed = { "gofumpt" },
-  --     automatic_installation = true,
-  --   },
-  -- },
+  {
+    import = "nvchad.blink.lazyspec",
+  },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
+    },
+  },
 }

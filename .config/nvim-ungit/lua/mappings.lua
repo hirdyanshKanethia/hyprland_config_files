@@ -18,8 +18,8 @@ vim.keymap.set("n", "d", '"_d', { desc = "Delete without copying" })
 vim.keymap.set("v", "d", '"_d', { desc = "Delete without copying" })
 
 -- Disable default Tab/Shift-Tab buffer switching
-vim.keymap.set({ "n", "v", "x" }, "<Tab>", "<Nop>", { silent = true })
-vim.keymap.set({ "n", "v", "x" }, "<S-Tab>", "<Nop>", { silent = true })
+vim.keymap.set({ "n", "v", "x" }, "<Tab>", "<cmd>tabnext<CR>", { silent = true })
+vim.keymap.set({ "n", "v", "x" }, "<S-Tab>", "<cmd>tabprevious<CR>", { silent = true })
 vim.keymap.set({ "n", "v", "x" }, "<A-h>", "<Nop>", { silent = true })
 
 -- Map Alt+Shift+h/l to previous/next buffer

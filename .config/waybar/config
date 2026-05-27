@@ -2,10 +2,9 @@
     "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["tray", "custom/seperator", "hyprland/workspaces"],
+        "modules-left": ["tray", "custom/seperator", "hyprland/workspaces", "cava"],
         "modules-center": ["custom/date", "custom/seperator","clock"],
         "modules-right": [
-          "cava",
           "pulseaudio",
           "custom/seperator",
           "backlight",
