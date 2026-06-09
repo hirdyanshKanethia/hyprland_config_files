@@ -2,7 +2,7 @@
     "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["tray", "custom/seperator", "hyprland/workspaces", "cava"],
+        "modules-left": ["tray", "custom/seperator", "hyprland/workspaces"],
         "modules-center": ["custom/date", "custom/seperator","clock"],
         "modules-right": [
           "pulseaudio",
@@ -157,7 +157,7 @@
     },
 
   "cava": {
-          // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+          "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
           "framerate": 30,
           "autosens": 1,
           "sensitivity": 100,

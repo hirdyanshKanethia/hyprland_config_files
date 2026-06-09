@@ -160,7 +160,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- Auto-formatting
     if
       client
-      and client.supports_method "textDocument/formatting"
+      and client:supports_method "textDocument/formatting"
       and (
         client.name == "gopls"
         or client.name == "clangd"

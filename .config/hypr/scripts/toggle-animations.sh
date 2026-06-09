@@ -1,13 +1,12 @@
-
 #!/bin/bash
+# Toggle Hyprland animations
 
-# Get current state
-state=$(hyprctl getoption animations:enabled | grep 'int:' | awk '{print $2}')
+state=$(hyprctl animations -j | jq -r '.[0][0].enabled')
 
-if [ "$state" = "1" ]; then
-    hyprctl keyword animations:enabled false
+if [ "$state" = "true" ]; then
+    hyprctl lua "hl.animation({ leaf = 'global', enabled = false })"
     notify-send "Animations Disabled"
 else
-    hyprctl keyword animations:enabled true
+    hyprctl lua "hl.animation({ leaf = 'global', enabled = true })"
     notify-send "Animations Enabled"
 fi

@@ -57,6 +57,7 @@ return {
     end,
   },
 
+  -- auto-session: to save the nvim session upon exit and resume it the next time
   {
     "rmagatti/auto-session",
     lazy = false,
@@ -73,6 +74,16 @@ return {
   {
     import = "nvchad.blink.lazyspec",
   },
+
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  --   build = "cd app && yarn install",
+  --   init = function()
+  --     vim.g.mkdp_filetypes = { "markdown" }
+  --   end,
+  --   ft = { "markdown" },
+  -- },
 
   {
     "nvim-treesitter/nvim-treesitter",
