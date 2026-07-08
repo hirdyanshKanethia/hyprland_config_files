@@ -55,7 +55,7 @@
 # Minimal Dark Theme with Transparency
 
 # Font Configuration
-font-family = "Caskaydia Code NF"
+font-family = "JetBrains Mono"
 font-size =  10
 font-feature = -calt  # Disable ligatures, remove if you want them
 

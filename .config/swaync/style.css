@@ -2,7 +2,8 @@
 
 * {
   font-size: 15px;
-  font-family: "Cascadia Code NF";
+  /* font-family: "Cascadia Code NF"; */
+  font-family: "Monocraft";
   transition: 100ms;
 }
 
@@ -85,7 +86,8 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button label {
-  font-family: "CascadiaCode Nerd Font";
+  /* font-family: "CascadiaCode Nerd Font"; */
+  font-family: "Monocraft";
   font-size: 1.3027rem;
   color: @color7;
   border: none;  /* Ensure no border causing white line */
@@ -103,7 +105,8 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:checked label {
-  font-family: "CascadiaCode Nerd Font";
+  /* font-family: "CascadiaCode Nerd Font"; */
+  font-family: "Monocraft";
   font-size: 1.3027rem;
   color: @color7;
   opacity: 1.0;
@@ -115,7 +118,8 @@
 }
 
 .widget-title label {
-  font-family: "CascadiaCode Nerd Font";
+  /* font-family: "CascadiaCode Nerd Font"; */
+  font-family: "Monocraft";
   font-size: 1.364rem;
   color: @color7;
   margin-left: 0.941rem;

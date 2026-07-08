@@ -3,7 +3,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     filters = {
-      dotfiles = false, -- show dotfiles (like .env)
+      dotfiles = true, -- show dotfiles (like .env)
     },
     opts = {
       view = {

@@ -2,7 +2,8 @@
 
 * {
   font-size: 15px;
-  font-family: "JetBrains Mono";
+  /* font-family: "JetBrains Mono"; */
+  font-family: "Monocraft";
 }
 
 window#waybar {
@@ -17,7 +18,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 7px;
+  padding: 3px;
   margin: 3px;
   border-radius: 5px;
   background: alpha(@background, 1);

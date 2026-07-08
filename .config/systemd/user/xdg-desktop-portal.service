@@ -1,0 +1,13 @@
+# This is a .service to override the xdg-desktop-portal service because it bugs out due to some dependecy issues
+
+[Unit]
+Description=Portal service
+PartOf=graphical-session.target
+Requires=dbus.service
+After=dbus.service graphical-session-pre.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.portal.Desktop
+ExecStart=/usr/libexec/xdg-desktop-portal
+Slice=session.slice

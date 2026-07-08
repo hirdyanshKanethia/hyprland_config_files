@@ -1,39 +1,23 @@
-# Dark Bluish Theme for Gazelle TUI
+[colors.primary]
+foreground = "#e8eefc"
+background = "#050505"
 
-# Base colors
-background = "#0f1b2b"
-foreground = "#c0d0e0"
+[colors.normal]
+black   = "#1a1a1a"
+red     = "#ff5555"
+green   = "#50fa7b"
+yellow  = "#00bfff"
+blue    = "#4f83ff"
+magenta = "#bd93f9"
+cyan    = "#00d4ff"
+white   = "#cfd8e3"
 
-# Border / accent
-accent = "#4f83cc"
-
-# Titles and headers
-title = "#e0e0ff"
-header = "#8faee6"
-
-# Selection
-selection_background = "#336699"
-selection_foreground = "#ffffff"
-
-# Highlighted entry (active item)
-highlight = "#5588cc"
-
-# Muted / inactive text
-dim_foreground = "#708090"
-
-# Errors / warnings
-error = "#ff5555"
-
-# Success / connected
-success = "#55ff99"
-
-# Wifi signal bars (optional)
-signal_full = "#66ccff"
-signal_medium = "#4f83cc"
-signal_low = "#336699"
-
-# 802.1X / enterprise auth highlight
-eap_label = "#7faaff"
-
-# Cursor / input
-input_cursor = "#ffffff"
+[colors.bright]
+black   = "#44475a"
+red     = "#ff6e6e"
+green   = "#69ff94"
+yellow  = "#66ffff"
+blue    = "#6aa8ff"
+magenta = "#d6acff"
+cyan    = "#99ffff"
+white   = "#ffffff"
