@@ -86,6 +86,51 @@ return {
   -- },
 
   {
+    "mikavilpas/yazi.nvim",
+    version = "*",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+
+    keys = {
+      {
+        "<leader>e",
+        "<cmd>Yazi<CR>",
+        desc = "Open Yazi",
+      },
+      {
+        "<leader>E",
+        "<cmd>Yazi cwd<CR>",
+        desc = "Open Yazi in current working directory",
+      },
+    },
+
+    opts = {
+      open_for_directories = true,
+    },
+
+    init = function()
+      -- Prevent netrw from opening directories
+      vim.g.loaded_netrwPlugin = 1
+    end,
+  },
+
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      picker = { enabled = true },
+      explorer = { enabled = true },
+      terminal = { enabled = true },
+      lazygit = { enabled = true },
+      dashboard = { enabled = true },
+      notifier = { enabled = true },
+    },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {

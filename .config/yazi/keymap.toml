@@ -1,0 +1,33 @@
+[[manager.prepend_keymap]]
+on = ["H"]
+run = "hidden toggle"
+desc = "Toggle hidden files"
+
+[[manager.prepend_keymap]]
+on = ["<C-h>"]
+run = "leave"
+
+[[manager.prepend_keymap]]
+on = ["<C-l>"]
+run = "enter"
+
+[[manager.prepend_keymap]]
+on = ["g","r"]
+run = "refresh"
+
+[[manager.prepend_keymap]]
+on = ["g","h"]
+run = "cd ~"
+
+[[manager.prepend_keymap]]
+on = ["g","c"]
+run = "cd ~/.config"
+
+[[manager.prepend_keymap]]
+on = ["g","d"]
+run = "cd ~/Downloads"
+
+[[manager.prepend_keymap]]
+on = ["g", "p"]
+run = "cd /home/hirdyansh/codespace"
+desc = "Cd to codespace"

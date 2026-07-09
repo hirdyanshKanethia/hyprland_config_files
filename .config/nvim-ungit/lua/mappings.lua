@@ -112,3 +112,124 @@ local modes = { "n", "v", "x" }
 for key, func in pairs(scroll_keys) do
   vim.keymap.set(modes, key, func, { silent = true })
 end
+
+-- =====================================================
+-- Snacks keymaps
+-- =====================================================
+local Snacks = require "snacks"
+
+local function del(lhs)
+  pcall(vim.keymap.del, "n", lhs)
+end
+
+-- Remove NvChad/Telescope mappings that we want to replace
+local remove = {
+  -- Find
+  "<leader>ff",
+  "<leader>fw",
+  "<leader>fb",
+  "<leader>fh",
+  "<leader>fo",
+  "<leader>fz",
+
+  -- Git
+  "<leader>gg",
+
+  -- Terminal
+  "<leader>tt",
+
+  -- Notifications (if any)
+  "<leader>nh",
+}
+
+for _, lhs in ipairs(remove) do
+  del(lhs)
+end
+
+-- ======================
+-- Picker
+-- ======================
+map("n", "<leader>ff", function()
+  Snacks.picker.files()
+end, { desc = "Find Files" })
+
+map("n", "<leader>fw", function()
+  Snacks.picker.grep()
+end, { desc = "Live Grep" })
+
+map("n", "<leader>fb", function()
+  Snacks.picker.buffers()
+end, { desc = "Buffers" })
+
+map("n", "<leader>fr", function()
+  Snacks.picker.recent()
+end, { desc = "Recent Files" })
+
+map("n", "<leader>fh", function()
+  Snacks.picker.help()
+end, { desc = "Help Tags" })
+
+map("n", "<leader>fk", function()
+  Snacks.picker.keymaps()
+end, { desc = "Keymaps" })
+
+map("n", "<leader>fc", function()
+  Snacks.picker.commands()
+end, { desc = "Commands" })
+
+map("n", "<leader>fd", function()
+  Snacks.picker.diagnostics()
+end, { desc = "Diagnostics" })
+
+map("n", "<leader>fs", function()
+  Snacks.picker.lsp_symbols()
+end, { desc = "Document LSP Symbols" })
+
+map("n", "<leader>fS", function()
+  Snacks.picker.lsp_workspace_symbols()
+end, { desc = "Workspace LSP Symbols" })
+
+map("n", "<leader>fj", function()
+  Snacks.picker.jumps()
+end, { desc = "Jump List" })
+
+map("n", "<leader>fM", function()
+  Snacks.picker.marks()
+end, { desc = "Marks" })
+
+-- ======================
+-- Git
+-- ======================
+map("n", "<leader>gg", function()
+  Snacks.lazygit()
+end, { desc = "LazyGit" })
+
+map("n", "<leader>gb", function()
+  Snacks.git.blame_line()
+end, { desc = "Git Blame" })
+
+map("n", "<leader>go", function()
+  Snacks.gitbrowse()
+end, { desc = "Open on GitHub" })
+
+-- ======================
+-- Notifications
+-- ======================
+map("n", "<leader>nh", function()
+  Snacks.notifier.show_history()
+end, { desc = "Notification History" })
+
+map("n", "<leader>nd", function()
+  Snacks.notifier.hide()
+end, { desc = "Dismiss Notifications" })
+
+-- ======================
+-- Scratch
+-- ======================
+map("n", "<leader>ss", function()
+  Snacks.scratch()
+end, { desc = "Scratch Buffer" })
+
+map("n", "<leader>sS", function()
+  Snacks.scratch.select()
+end, { desc = "Scratch Buffers" })

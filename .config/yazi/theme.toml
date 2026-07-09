@@ -1,0 +1,12 @@
+[mgr]
+cwd = { fg = "blue", bold = true }
+
+hovered = { bg = "blue", fg = "black" }
+
+preview_hovered = { bg = "darkgray" }
+
+marker_selected = { fg = "blue" }
+
+marker_copied = { fg = "green" }
+
+marker_cut = { fg = "red" }
